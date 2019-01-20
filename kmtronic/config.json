@@ -1,0 +1,45 @@
+{
+    "name": "KMTronic USB Relay Box",
+    "version": "dev",
+    "slug": "kmtronic",
+    "description": "Connect your KMTronic USB Relay Box with ease via MQTT to Hass.io",
+    "url": "https://github.com/donatmarko/hassio-addon-kmtronic",
+    "startup": "application",
+    "auto_uart": true,
+    "arch": [
+        "aarch64",
+        "amd64",
+        "armhf",
+        "i386"
+    ],
+    "boot": "auto",
+    "hassio_api": true,
+    "hassio_role": "default",
+    "options": {
+        "log_level": "info",
+        "relays_count": 8,
+        "topic": "kmtronic",
+        "broker": "127.0.0.1",
+        "port": 1883,
+        "username": "",
+        "password": "",
+        "serial_port": "",
+        "mqtt_discovery": false,
+        "mqtt_discovery_prefix": "homeassistant"
+    },
+    "schema": {
+        "log_level": "match(^(trace|debug|info|notice|warning|error|fatal)$)",
+        "relays_count": "match(^[1-8]$)",
+        "topic": "match(^[a-zA-Z0-9\\d](?:[a-zA-Z0-9\\d]|-(?=[a-zA-Z0-9\\d])){0,32}$)",
+        "broker": "str",
+        "port": "port",
+        "username": "match(^$|^[a-zA-Z0-9\\d](?:[a-zA-Z0-9\\d]|-(?=[a-zA-Z0-9\\d])){0,32}$)",
+        "password": "str",
+        "serial_port": "match(^$|^(\/dev\/tty)(AMA|USB|ACM)[0-9]$)",
+        "mqtt_discovery": "bool",
+        "mqtt_discovery_prefix": "str"
+    },
+    "environment": {
+        "LOG_FORMAT": "{LEVEL}: {MESSAGE}"
+    }
+  }
