@@ -30,7 +30,7 @@
     "schema": {
         "log_level": "match(^(trace|debug|info|notice|warning|error|fatal)$)",
         "relays_count": "match(^[1-8]$)",
-        "topic": "match(^[a-zA-Z0-9\\d](?:[a-zA-Z0-9\\d]|-(?=[a-zA-Z0-9\\d])){0,32}$)",
+        "topic": "str",
         "broker": "str",
         "port": "port",
         "username": "match(^$|^[a-zA-Z0-9\\d](?:[a-zA-Z0-9\\d]|-(?=[a-zA-Z0-9\\d])){0,32}$)",
