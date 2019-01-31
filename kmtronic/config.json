@@ -1,6 +1,6 @@
 {
     "name": "KMTronic USB Relay Box",
-    "version": "0.1",
+    "version": "dev",
     "slug": "kmtronic",
     "description": "Connect your KMTronic USB Relay Box with ease via MQTT to Hass.io",
     "url": "https://github.com/donatmarko/hassio-addon-kmtronic",
